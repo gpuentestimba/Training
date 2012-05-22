@@ -11,17 +11,17 @@ class ProductTest < ActiveSupport::TestCase
   end
   
   test "should not save product without description" do
-      product = Product.new(:name => "Produt1", :price => 1.5, :image => "ImageTest")
+      product = Product.new(:name => "Product1", :price => 1.5, :image => "ImageTest")
       assert !product.save, "Saved the product without a description"
   end
   
   test "should not save product without image" do
-      product = Product.new(:name => "Produt1", :price => 1.5, :description => "DescriptionTest")
+      product = Product.new(:name => "Product1", :price => 1.5, :description => "DescriptionTest")
       assert !product.save, "Saved the product without a image"
   end
   
   test "should not save product without price greater than 0" do
-      product = Product.new(:name => "Produt1", :price => -1.5, :description => "DescriptionTest", :image => "ImageTest")
+      product = Product.new(:name => "Product1", :price => -1.5, :description => "DescriptionTest", :image => "ImageTest")
       assert !product.save, "Saved the product without price grater than 0"
   end
   
@@ -29,5 +29,17 @@ class ProductTest < ActiveSupport::TestCase
       product = Product.new(:name => "MyString")
       assert !product.save, "Saved the product with same name of another product"
   end
+  
+ # test "should not save product with the invalid URL image" do
+ #     product = Product.new(:name => "Product1", :price => 1.5, :description => "DescriptionTest", :image => "ImageTest")
+ #     product.save
+ #     
+ #     p = Product.where(:name => "Product1")
+ #     if (p[:name] == "default")
+ #         assert true
+ #     else
+ #         assert false
+ #     end 
+ # end
   
 end
