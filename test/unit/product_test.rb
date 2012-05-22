@@ -35,7 +35,7 @@ class ProductTest < ActiveSupport::TestCase
  #     product.save
  #     
  #     p = Product.where(:name => "Product1")
- #     if (p[:name] == "default")
+ #     if (p[:image] == "default")
  #         assert true
  #     else
  #         assert false
