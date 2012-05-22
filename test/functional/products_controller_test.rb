@@ -3,6 +3,12 @@ require 'test_helper'
 class ProductsControllerTest < ActionController::TestCase
   setup do
     @product = products(:one)
+    @pro = {
+    :description => "lorem",
+    :name => "ipsum",
+    :image => "go.jpg",
+    :price => 12.99
+    }
   end
 
   test "should get index" do
@@ -18,7 +24,7 @@ class ProductsControllerTest < ActionController::TestCase
 
   test "should create product" do
     assert_difference('Product.count') do
-      post :create, product: { description: @product.description, name: @product.name, price: @product.price }
+      post :create, product: @pro 
     end
 
     assert_redirected_to product_path(assigns(:product))
@@ -35,7 +41,7 @@ class ProductsControllerTest < ActionController::TestCase
   end
 
   test "should update product" do
-    put :update, id: @product, product: { description: @product.description, name: @product.name, price: @product.price }
+    put :update, id: @product, product: { description: @product.description, name: @product.name, price: @product.price, image: @product.image}
     assert_redirected_to product_path(assigns(:product))
   end
 

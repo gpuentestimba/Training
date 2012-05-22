@@ -4,8 +4,10 @@ one:
   name: MyString
   description: MyText
   price: 1.5
+  image: MyString
 
 two:
-  name: MyString
+  name: MyString2
   description: MyText
   price: 1.5
+  image: MyString

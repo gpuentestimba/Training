@@ -42,6 +42,11 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(params[:product])
     
+    
+    if !( params[:product][:image] =~ /^(http:\/\/).*(.gif|.PNG|.JPG)$/ )
+      @product[:image] = "default"
+    end
+    
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }

@@ -37,13 +37,13 @@ color: #4682B4
 <% @products.each do |product| %>
   <tr>
   	 <td>
-  	<%if product.image != "" %>
+  	<%if product.image != "default" %>
    		<img border="0" src=<%= product.image %>  width="120" height="120" />
     <%else %>
     	<%=image_tag "noimage.jpg", :width => "120", :height=>"120" %>
     <%end%>
     </td>
-    <td class="description"> <div class="name"> <b><%= product.name %></b> </div></br>
+    <td class="description"> <div class="name"> <b><%= product.name %></b> </div> </br>
     	<%= product.description %>
 	</td>
     <td><%= link_to 'Show', product %></br>
