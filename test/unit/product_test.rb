@@ -30,16 +30,15 @@ class ProductTest < ActiveSupport::TestCase
       assert !product.save, "Saved the product with same name of another product"
   end
   
- # test "should not save product with the invalid URL image" do
- #     product = Product.new(:name => "Product1", :price => 1.5, :description => "DescriptionTest", :image => "ImageTest")
- #     product.save
- #     
- #     p = Product.where(:name => "Product1")
- #     if (p[:image] == "default")
- #         assert true
- #     else
- #         assert false
- #     end 
- # end
+  test "should not save product with the invalid URL image" do
+      product = Product.new(:name => "Product1", :price => 1.5, :description => "DescriptionTest", :image => "ImageTest")
+      product.save
+      
+      if (product.image == "default")
+          assert true
+      else
+          assert false
+      end 
+  end
   
 end
