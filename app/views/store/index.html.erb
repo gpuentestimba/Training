@@ -1,0 +1,45 @@
+<%= stylesheet_link_tag "store" %>
+
+<section id="intro">  
+	<h1>Pragmatic Bookshelf</h1>
+	
+</section>  
+<div>
+
+	<div id="column" > 
+		</br></br></br>
+		<a href="#">Home</a></br>
+		<a href="#">Questions</a></br>
+		<a href="#">News</a></br>
+		<a href="#">Contact</a></br>
+		<%= link_to "Products", :controller => "products" %>			
+	</div>
+	
+	<div id="side" > 
+		<p id="texto" >Your Pragmatic Catalog</p>
+	
+		<ul id="products">
+		<% @products.each do |product| %>
+		  <li>	  	
+		  	<div>
+		  	 	<div class="li1">
+		   			<%if product.image != "default" %>
+		   				<img src=<%= product.image %>  width="120" height="120" />
+		   			<%else %>
+		    			<%=image_tag "noimage.jpg", :width => "120", :height=>"120" %> 
+		    		<%end%>
+		     	</div>
+		     	
+		    	<div class="li2">
+		     		<div class="name"> <b><%= product.name %></b> </div> </br>
+	    			<div id="text"><%= product.description %></div> </br>
+	    			<p id="price" >$<%= product.price %></p>
+		    	</div>	
+			</div>
+		  </li>
+		<% end %>
+		</ul>
+	
+	</div>
+
+</div>

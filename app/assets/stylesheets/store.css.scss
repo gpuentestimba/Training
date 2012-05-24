@@ -1,0 +1,92 @@
+// Place all the styles related to the store controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+a:link {color:#00CC66;}
+a:visited {color:#00CC66;} 
+
+
+#products
+{
+border-collapse:collapse;
+border-top-style:dotted;
+border-color:#0066CC;
+list-style-type:none;
+}
+
+.li1
+{
+float:left;
+}
+
+.li2
+{
+float:left;
+}
+
+#texto
+{
+color:#3333FF;
+font-size:20px;
+}
+
+#price
+{
+color:#3333FF;
+font-size:15px;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#intro{
+background-color:#9c9;
+border-bottom:3px solid #00CC00;
+}
+
+#intro h1{
+text-align:center;
+color:#006633;
+font-size:35px;
+}
+
+#column{
+float:left;
+width:20%;
+height:1000px;
+background-color:#141;
+border-bottom:3px solid #00CC00;
+
+}
+
+#column a{
+padding-left:25%;
+
+}
+
+#side{
+float:left;
+width:50%;
+
+}
+
+#side li{
+height:125px;
+border-bottom:1px solid #0066CC;
+}
+
+#text{
+}
+
+.description{
+width:50%;
+
+}
+
+.tdImage{
+ 
+}
+
+.name{
+font-size:15px;
+color: #4682B4;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}

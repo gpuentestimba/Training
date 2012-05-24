@@ -1,7 +1,9 @@
 Training::Application.routes.draw do
   
 
-  root :to => "home#index"
+  get "store/index"
+
+  root :to => "store#index"
   
   resources :products
   
