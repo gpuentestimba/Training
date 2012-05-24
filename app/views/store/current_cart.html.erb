@@ -1,0 +1,12 @@
+<%= stylesheet_link_tag "store" %>
+
+<%= render 'form' %>
+
+<div id="side2" > 
+	<h1>Your Pragmatic	Cart</h1>
+	<ul>
+	<% @s.each do |a| %>
+		<li> <%= a %> </li></br>
+	<%end%>
+	<ul>
+</div> 
