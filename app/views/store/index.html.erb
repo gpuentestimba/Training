@@ -16,12 +16,12 @@
 	</div>
 	
 	<div id="side" > 
-		<p id="texto" >Your Pragmatic Catalog</p>
+		<p id="title" >Your Pragmatic Catalog</p>
 	
 		<ul id="products">
 		<% @products.each do |product| %>
 		  <li>	  	
-		  	<div>
+		  	<div id="data">
 		  	 	<div class="li1">
 		   			<%if product.image != "default" %>
 		   				<img src=<%= product.image %>  width="120" height="120" />
