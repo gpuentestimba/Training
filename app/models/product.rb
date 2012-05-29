@@ -5,12 +5,12 @@ class Product < ActiveRecord::Base
   validates_uniqueness_of :name
   validates_numericality_of :price, :greater_than => 0
  
-  has_many :lineItems
+  has_many :lineItems, :dependent => :delete_all
   
   validate :valid_url
   def valid_url
      if !( self.image =~ /^(http:\/\/).*(.gif|.PNG|.JPG)$/ )
-      endself.image = "default"
+      self.image = "default"
      end
   end
  

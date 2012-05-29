@@ -1,11 +1,15 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  productName: MyString
+one: 
+  cart_id: 1  
+  product_id: one
+  price: 1.59
   quantity: 1
-  price: 1.5
+  
 
-two:
-  productName: MyString
+
+
+two: 
+  cart_id: 1  
+  product_id: two
+  price: 1.50
   quantity: 1
-  price: 1.5

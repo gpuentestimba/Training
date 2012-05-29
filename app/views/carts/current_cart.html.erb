@@ -1,0 +1,52 @@
+<%= stylesheet_link_tag "store" %>
+
+<%= render 'form' %>
+
+<% if @i == nil%>
+	<div id="alert">
+ 		<b>Your cart is currently empty</b>
+ 	</div>
+<% else 	%>
+
+<div id="side2" > 
+	<h1>Your Pragmatic	Cart</h1>
+	<ul>
+		<% @i.each do |i| %>
+		<li>
+			<div id="item" >
+			<%= i.quantity %>x <%= i.product.name %>  
+			</div>
+			<div id="itemPrice" >
+			$<%= i.price %>
+			</div>
+		</li>
+		<br>		
+		<% end %>
+		
+		<li>
+			<div id="itemTotal" >
+			</div>
+			<div id="itemPrice" >		
+			</div>			
+		</li>
+		<li>		
+			<div id="itemTotal" >
+				Total
+			</div>
+			<div id="itemPrice2" >
+			$<%= @total %>
+			</div>
+		</li>
+		<li>
+			<div id="item" >	
+			<%= button_to "Empty Cart", { :controller => "carts", :action => "destroy", :id => @c.id } %>  
+			
+			</div>
+		</li>
+		
+	</ul>	
+</div> 
+
+<% end %>
+
+

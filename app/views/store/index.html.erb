@@ -20,7 +20,10 @@
 		    	<div class="li2">
 		     		<div class="name"> <b><%= product.name %></b> </div> </br>
 	    			<div id="text"><%= product.description %></div> </br>
-	    			<div id="price">$<%= product.price %> <%= button_to "Add to Cart", {:action=>"current_cart", :name=>product.name} %> </div>
+	    			<div id="price">$<%= product.price %>
+    								<%= button_to "Add to Cart", 
+    								{ :controller => "carts", :action => "current_cart", :id => @id, :lineItem_id => product.id } %>  
+    								</div>
 	    			
 		    	</div>	
 			</div>

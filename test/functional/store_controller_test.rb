@@ -13,8 +13,6 @@ class StoreControllerTest < ActionController::TestCase
       assert_select "li", 2
     end
     
-    assert_select "p", 3
-    
     assert_select "#text", /MyText/
     
     assert_select "#price", /\$[,\d]+\.(\d|\d\d)/
